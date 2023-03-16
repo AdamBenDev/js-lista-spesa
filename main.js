@@ -1,17 +1,29 @@
 /*Data una lista della spesa, stampare sulla pagina (anche brutalmente, basta che si vedano) gli elementi della lista individualmente con un ciclo while.*/
 
-//*Lista della spesa
+//!Lista della spesa
 
-let listaSpesa = ["Pomodori", "Cipolle", "Insalata", "Pasta" , "Pane" ]
+let listaSpesa = ["Pomodori", "Cipolle", "Insalata", "Pasta" ];
+
+//!seleziono l'html Element
+
+let listaHtml = document.getElementById("lista");
 
 
-//*ciclo while per stampare gli elementi della lista uno per uno 
+//!ciclo while per stampare gli elementi della lista uno per uno 
+
+
 let i = 0;
 
-while (i <listaSpesa.lenght) {
-    let elemento = listaSpesa[i];
-    let item = document.createElement("li");
-    item.textContent = elemento;
+while (i < listaSpesa.length) {
+
+    let elementoLista = document.createElement("li");
+
+    elementoLista.textContent = listaSpesa[i];
+
+    listaHtml.appendChild(elementoLista);
+
+    i++;
+
 }
 
 
