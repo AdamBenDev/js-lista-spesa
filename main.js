@@ -8,4 +8,10 @@ let listaSpesa = ["Pomodori", "Cipolle", "Insalata", "Pasta" , "Pane" ]
 //*ciclo while per stampare gli elementi della lista uno per uno 
 let i = 0;
 
-while (i < listaSpesa.lenght)
+while (i <listaSpesa.lenght) {
+    let elemento = listaSpesa[i];
+    let item = document.createElement("li");
+    item.textContent = elemento;
+}
+
+
